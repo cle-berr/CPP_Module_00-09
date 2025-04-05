@@ -1,18 +1,28 @@
-NAME = phonebook
+NAME = phone
 
-SRC = phonebook.cpp
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 
-CC = c++ -Wall -Wextra -Werror -std=c++98
+SRCS = main.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-		$(CC) $(SRC) -o $(NAME)
-		@echo "\033[32m$(NAME) has been compiled successfully!\033[0m"
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@echo "\033[32mCompiled $(NAME) successfully!\033[0m"
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	rm -f $(OBJS)
+	@echo "Make correctely clean"
 
 fclean: clean
-		rm -f $(NAME)
+	rm -f $(NAME)
+	@echo "Suppresed $(NAME) successfully"
 
 re: fclean all
+
+.PHONY: all clean fclean re
