@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cle-berr <cle-berr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:23:57 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/02 16:39:35 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/04/10 10:45:43 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 
 int main(int ac, char **av)
 {

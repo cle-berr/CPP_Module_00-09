@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 17:02:47 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/06 18:42:02 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/04/10 10:45:25 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void Contact::add_contact()
 		while (1)
 		{
 			std::cout << "|Enter the " << this->_field_name[i] << ":\n"
-                      << "|->\033[1;97m";
+                      << "|->\033[1m";
 			std::getline(std::cin, result);
             std::cout << "\033[0m";
 			if (std::cin.eof())
