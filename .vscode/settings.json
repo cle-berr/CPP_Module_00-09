@@ -69,6 +69,9 @@
 		"variant": "cpp",
 		"semaphore": "cpp",
 		"__nullptr": "cpp",
-		"hash_map": "cpp"
+		"hash_map": "cpp",
+		"codecvt": "cpp",
+		"__string": "cpp",
+		"ios": "cpp"
 	}
 }
