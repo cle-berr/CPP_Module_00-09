@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 14:35:40 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/11 11:00:56 by cle-berr         ###   ########.fr       */
+/*   Created: 2025/04/14 14:54:14 by cle-berr          #+#    #+#             */
+/*   Updated: 2025/04/14 15:52:50 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-int main()
+HumanB::HumanB(std::string name): _name(name) {}
+
+HumanB::~HumanB() {}
+
+void HumanB::setWeapon(Weapon &weapon)
 {
-	{
-		Zombie *horde = zombieHorde(5 ,"Foo");
-		for (int i = 0; i != 5; i++)
-			horde[i].announce();
-		delete [] horde;
-	}
-	std::cout << std::endl;
-	{
-		Zombie *horde = zombieHorde(2 ,"Vree");
-		for (int i = 0; i != 2; i++)
-			horde[i].announce();
-		delete [] horde;
-	}
-	return 0;
+	this->_weapon = &weapon;
+}
+
+void HumanB::attack()
+{
+	if (this->_weapon != NULL)
+		std::cout	<< this->_name << " attacks with their "
+					<< this->_weapon->getType() << std::endl;
+	else
+		std::cout << this->_name << " attack with noting!\n";
 }

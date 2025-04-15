@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 14:35:40 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/11 11:00:56 by cle-berr         ###   ########.fr       */
+/*   Created: 2025/04/14 14:55:00 by cle-berr          #+#    #+#             */
+/*   Updated: 2025/04/14 15:05:09 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-int main()
+#include <iostream>
+
+class Weapon
 {
-	{
-		Zombie *horde = zombieHorde(5 ,"Foo");
-		for (int i = 0; i != 5; i++)
-			horde[i].announce();
-		delete [] horde;
-	}
-	std::cout << std::endl;
-	{
-		Zombie *horde = zombieHorde(2 ,"Vree");
-		for (int i = 0; i != 2; i++)
-			horde[i].announce();
-		delete [] horde;
-	}
-	return 0;
-}
+	private:
+
+		std::string _type;
+
+	public:
+
+		Weapon();
+		Weapon(std::string type);
+		~Weapon();
+
+		const std::string	&getType();
+		void				setType(std::string type);
+};
