@@ -61,9 +61,7 @@ void Contact::add_contact()
 		while (1)
 		{
 			std::cout << "|Enter the " << this->_field_name[i] << ":\n"
-                      << "|->\033[1m";
 			std::getline(std::cin, result);
-            std::cout << "\033[0m";
 			if (std::cin.eof())
 			{
 				std::cout << "--------------See you later !--------------|" << std::endl;

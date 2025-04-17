@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 10:45:51 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/10 13:38:49 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/04/17 14:32:51 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,8 @@ bool Account::makeWithdrawal(int withdrawal)
 	if (withdrawal > checkAmount())
 	{
 		std::cout	<< " index:" << _accountIndex
-				<< ";amount:" << _amount
-				<< ";withdrawals:" << "refused"
+				<< ";p_amount:" << _amount
+				<< ";withdrawal:" << "refused"
 				<< std::endl;
 		return false;
 	}
@@ -122,7 +122,7 @@ void Account::makeDeposit(int deposit)
 	_displayTimestamp();
 	std::cout	<< " index:" << _accountIndex
 				<< ";p_amount:" << checkAmount()
-				<< ";deposits:" << deposit;
+				<< ";deposit:" << deposit;
 	this->_amount += deposit;
 	this->_totalAmount += deposit;
 	this->_nbDeposits++;

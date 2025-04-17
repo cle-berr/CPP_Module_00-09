@@ -54,9 +54,7 @@ void PhoneBook::get_contact_infos()
 	while(42)
 	{
 		std::cout << "|------Choose a index between 1 and 8-------|\n"
-				  << "|->\033[1m";
 		std::getline(std::cin, input);
-		std::cout << "\033[0m";
 		if (std::cin.eof())
 		{
 			std::cout << "|--------------See you later !--------------|" << std::endl;

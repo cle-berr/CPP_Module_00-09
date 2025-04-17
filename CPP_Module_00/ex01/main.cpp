@@ -27,9 +27,8 @@ int main()
                   << "|---------EXIT to exit the program----------|\n"
                   << "|-------------------------------------------|\n"
                   << "|---------Waiting for your command:---------|\n"
-                  << "|->\033[1m";
+                  << "|->";
         std::getline(std::cin,input);
-        std::cout << "\033[0m";
         if (std::cin.eof())
         {
             std::cout << "\n";
