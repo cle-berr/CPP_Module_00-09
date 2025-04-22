@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 16:19:43 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/10 10:45:16 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/04/22 14:18:09 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void PhoneBook::get_contact_infos()
 		this->_Phonebook[i].get_infos(i + 1);
 	while(42)
 	{
-		std::cout << "|------Choose a index between 1 and 8-------|\n"
+		std::cout << "|------Choose a index between 1 and 8-------|\n";
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 		{

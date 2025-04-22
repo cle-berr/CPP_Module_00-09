@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 14:20:56 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/22 12:49:36 by cle-berr         ###   ########.fr       */
+/*   Created: 2025/04/22 11:34:46 by cle-berr          #+#    #+#             */
+/*   Updated: 2025/04/22 15:05:25 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include <iostream>
 #include <string>
-#include <cmath>
 
-class Fixed
+class ClapTrap
 {
-
 	private:
-	
-		int _stock;
-		static const int _stock_bits;
-	
+
+		std::string		_name;
+		int	_hitPoints;
+		int	_energyPoints;
+		int	_attackDamage;
+
 	public:
 	
-		Fixed();
-		Fixed(const int number);
-		Fixed(const float number);
-		Fixed(const Fixed &other);
-		
-		Fixed &operator=(const Fixed &other);
-		
-		~Fixed();
-		
-		float toFloat(void) const;
-		int toInt(void) const;
-		int	getRawBits(void) const;
-		void setRawBits(int const raw);
+		ClapTrap();
+		~ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &copy);
+
+		ClapTrap &operator=(const ClapTrap &other);
+
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
 
-std::ostream	&operator<<(std::ostream &output, const Fixed &other);
