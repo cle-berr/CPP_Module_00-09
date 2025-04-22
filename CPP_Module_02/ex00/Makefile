@@ -2,7 +2,7 @@ NAME = My_first_cannon
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g3 -std=c++98
 
-SRCS = 
+SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
