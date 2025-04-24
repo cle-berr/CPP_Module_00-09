@@ -6,13 +6,13 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:54:14 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/14 15:52:50 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:29:08 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name): _name(name) {}
+HumanB::HumanB(std::string name): _name(name), _weapon(NULL) {}
 
 HumanB::~HumanB() {}
 
