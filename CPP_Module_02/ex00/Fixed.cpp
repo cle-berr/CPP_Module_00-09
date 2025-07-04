@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:20:59 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/17 16:47:01 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/03 13:26:15 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 }
 
 int Fixed::getRawBits() const {
-	std::cout	<< "getRawBits member function called\n";
+	std::cout << "getRawBits member function called" << std::endl;
 	return this->_stock;
 }
 

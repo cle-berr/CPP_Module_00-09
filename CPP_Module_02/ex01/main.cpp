@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:20:53 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/18 11:05:42 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/03 13:30:52 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main( void )
 {
 	Fixed a;
 	Fixed const b( 10 );
-	Fixed const c( 42.99f );
+	Fixed const c( 42.42f );
 	Fixed const d( b );
 
 	a = Fixed( 1234.4321f );
