@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 11:34:54 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/24 11:17:57 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/04 14:18:16 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void Claptest()
 {
+	std::cout << YELLOW << "-------------------CLAPTEST-------------------" << RESET << std::endl;
+
 	std::cout << std::endl;
 	ClapTrap Elouann("Elouann");
 	ClapTrap Cyprien("Cyprien");
@@ -44,6 +46,8 @@ void Claptest()
 
 void Scavtest()
 {
+	std::cout << MAGENTA << "-------------------SCAVTEST-------------------" << RESET << std::endl;
+
 	std::cout << std::endl;
 	ScavTrap Elouann("Elouann");
 	ScavTrap Cyprien("Cyprien");
@@ -78,6 +82,7 @@ void Scavtest()
 
 void Fragtest()
 {
+	std::cout << BLUE << "-------------------FRAGTEST-------------------" << RESET << std::endl;
 	std::cout << std::endl;
 	FragTrap Elouann("Elouann");
 	FragTrap Cyprien("Cyprien");

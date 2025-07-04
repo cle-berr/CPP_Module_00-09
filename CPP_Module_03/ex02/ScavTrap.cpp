@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:32:51 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/07/01 10:23:23 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/04 14:10:07 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ScavTrap::ScavTrap()
 	this->_attackDamage = 20;
 	this->_name = "Unknown";
 	this->_guardingGate = false;
-	std::cout << "\033[32mScavTrap constructor as been called for " << _name << "\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap" << GREEN << " constructor as been called for " << _name << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
@@ -29,18 +29,18 @@ ScavTrap::ScavTrap(std::string name)
 	this->_attackDamage = 20;
 	this->_name = name;
 	this->_guardingGate = false;
-	std::cout << "\033[32mScavTrap constructor as been called for " << _name << "\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap" << GREEN << " constructor as been called for " << _name << RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 {
-	std::cout << "\033[33mScavTrap constructor copy as been called" << "\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap" << GREEN << " constructor copy as been called" << RESET << std::endl;
 	*this = copy;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "\033[31mScavTrap destructor as been called for " << _name << "\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap" << RED << " destructor as been called for " << _name << RESET << std::endl;
 	return ;
 }
 
@@ -57,16 +57,16 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (this->_energyPoints <= 0)
 	{
-		std::cout << "ScavTrap " << _name << " can't attack <not enough energy>. " << target << " didn't take any damage." << std::endl;
+		std::cout << MAGENTA << "ScavTrap " << RED << _name << " can't attack <not enough energy>. " << MAGENTA << target << " didn't take any damage." << std::endl;
 		return ;
 	}
 	if (this->_hitPoints <= 0)
 	{
-		std::cout << "\033[37mScavTrap " << _name << " can't attack <he is dead>. " << target << " didn't take any damage." << std::endl;
+		std::cout << MAGENTA << "ScavTrap " << RED << _name << " can't attack <he is dead>. " << MAGENTA << target << " didn't take any damage." << std::endl;
 		return ;
 	}
 	
-	std::cout << "\033[35mScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap " << BLUE << _name << " attacks " << target << MAGENTA << ", causing " << _attackDamage << " points of damage!\033[0m" << std::endl;
 	_energyPoints--;
 }
 
@@ -74,9 +74,9 @@ void ScavTrap::guardGate()
 {
 	if (this->_guardingGate == true)
 	{
-		std::cout << "\033[33mScavTrap " << _name << " is allready in guarding mode" << "\033[0m" << std::endl;
+		std::cout << MAGENTA << "ScavTrap " << PINK << _name << " is allready in guarding mode" << RESET << std::endl;
 		return ;
 	}
-	std::cout << "\033[33mScavTrap " << _name << " is now in guarding mode" << "\033[0m" << std::endl;
+	std::cout << MAGENTA << "ScavTrap " << CYAN << _name << " is now in guarding mode" << RESET << std::endl;
 	this->_guardingGate = true;
 }

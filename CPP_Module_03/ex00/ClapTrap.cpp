@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 11:34:44 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/07/04 13:49:15 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/04 14:01:27 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,16 +82,16 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energyPoints <= 0)
 	{
-		std::cout << YELLOW << "ClapTrap " << _name << " can't be repaired <not enough energy>." << std::endl;
+		std::cout << YELLOW << "ClapTrap " << RED << _name << " can't be repaired <not enough energy>." << RESET << std::endl;
 		return ;
 	}
 	if (this->_hitPoints <= 0)
 	{
-		std::cout << YELLOW << "ClapTrap " << _name << " can't be repaired <he is dead>. " << std::endl;
+		std::cout << YELLOW << "ClapTrap " << RED << _name << " can't be repaired <he is dead>. " << RESET << std::endl;
 		return ;
 	}
-	std::cout << YELLOW << "ClapTrap " << GREEN << _name << " is repaired by " << amount << " hit points.";
+	std::cout << YELLOW << "ClapTrap " << MAGENTA << _name << " is repaired by " << amount << " hit points.";
 	_hitPoints += amount;
-	std::cout << " Now has " << _hitPoints << " hit points." << RESET << std::endl;
+	std::cout << GREEN << " Now has " << _hitPoints << " hit points." << RESET << std::endl;
 	_energyPoints--;
 }
