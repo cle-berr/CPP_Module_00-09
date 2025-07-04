@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 09:39:31 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/24 11:12:52 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/01 10:05:43 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class FragTrap: public ClapTrap
 	public:
 	
 		FragTrap();
-		virtual ~FragTrap();
+		~FragTrap();
 		FragTrap(std::string name);
 		FragTrap(const FragTrap &copy);
 

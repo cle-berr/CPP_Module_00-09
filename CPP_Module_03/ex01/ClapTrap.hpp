@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 11:34:46 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/22 15:11:09 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/01 10:05:24 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ClapTrap
 	public:
 	
 		ClapTrap();
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &copy);
 

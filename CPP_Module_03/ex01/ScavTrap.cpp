@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:32:51 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/24 09:34:43 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/01 10:20:19 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ ScavTrap::ScavTrap()
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 	this->_name = "Unknown";
+	this->_guardingGate = false;
 	std::cout << "\033[32mScavTrap constructor as been called for " << _name << "\033[0m" << std::endl;
 }
 
@@ -27,6 +28,7 @@ ScavTrap::ScavTrap(std::string name)
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 	this->_name = name;
+	this->_guardingGate = false;
 	std::cout << "\033[32mScavTrap constructor as been called for " << _name << "\033[0m" << std::endl;
 }
 

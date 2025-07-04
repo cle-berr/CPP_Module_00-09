@@ -6,7 +6,7 @@
 /*   By: cle-berr <cle-berr@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 14:54:08 by cle-berr          #+#    #+#             */
-/*   Updated: 2025/04/24 09:11:06 by cle-berr         ###   ########.fr       */
+/*   Updated: 2025/07/01 10:05:58 by cle-berr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ScavTrap: public ClapTrap
 	public:
 	
 		ScavTrap();
-		virtual ~ScavTrap();
+		~ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &copy);
 
